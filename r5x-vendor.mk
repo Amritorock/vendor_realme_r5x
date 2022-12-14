@@ -450,6 +450,16 @@ PRODUCT_COPY_FILES += \
     vendor/realme/r5x/proprietary/vendor/firmware/tp/19631/nt_hlt_fw.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/tp/19631/nt_hlt_fw.bin \
     vendor/realme/r5x/proprietary/vendor/firmware/tp/19631/nt_hlt_fw_mp.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/tp/19631/nt_hlt_fw_mp.bin \
     vendor/realme/r5x/proprietary/vendor/firmware/tp/19631/nt_hlt_fw_signed.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/tp/19631/nt_hlt_fw_signed.bin \
+    vendor/realme/r5x/proprietary/vendor/firmware/tp/19743/RA170A1.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/tp/19743/RA170A1.bin \
+    vendor/realme/r5x/proprietary/vendor/firmware/tp/19743/RA170X1.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/tp/19743/RA170X1.bin \
+    vendor/realme/r5x/proprietary/vendor/firmware/tp/19743/ilitek_fw_inx_signed.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/tp/19743/ilitek_fw_inx_signed.bin \
+    vendor/realme/r5x/proprietary/vendor/firmware/tp/19743/ilitek_fw_xlgg3_signed.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/tp/19743/ilitek_fw_xlgg3_signed.bin \
+    vendor/realme/r5x/proprietary/vendor/firmware/tp/19743/nt_hlt_fw.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/tp/19743/nt_hlt_fw.bin \
+    vendor/realme/r5x/proprietary/vendor/firmware/tp/19743/nt_hlt_fw_mp.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/tp/19743/nt_hlt_fw_mp.bin \
+    vendor/realme/r5x/proprietary/vendor/firmware/tp/19743/nt_hlt_fw_signed.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/tp/19743/nt_hlt_fw_signed.bin \
+    vendor/realme/r5x/proprietary/vendor/firmware/tp/19743/nt_hltg_fw.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/tp/19743/nt_hltg_fw.bin \
+    vendor/realme/r5x/proprietary/vendor/firmware/tp/19743/nt_hltg_fw_mp.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/tp/19743/nt_hltg_fw_mp.bin \
+    vendor/realme/r5x/proprietary/vendor/firmware/tp/19743/nt_hltg_fw_signed.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/tp/19743/nt_hltg_fw_signed.bin \
     vendor/realme/r5x/proprietary/vendor/gpu/kbc/sequence_manifest.bin:$(TARGET_COPY_OUT_VENDOR)/gpu/kbc/sequence_manifest.bin \
     vendor/realme/r5x/proprietary/vendor/gpu/kbc/unified_kbcs_32.bin:$(TARGET_COPY_OUT_VENDOR)/gpu/kbc/unified_kbcs_32.bin \
     vendor/realme/r5x/proprietary/vendor/gpu/kbc/unified_kbcs_64.bin:$(TARGET_COPY_OUT_VENDOR)/gpu/kbc/unified_kbcs_64.bin \
