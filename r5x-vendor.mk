@@ -193,7 +193,7 @@ PRODUCT_COPY_FILES += \
     vendor/realme/r5x/proprietary/vendor/bin/garden_app:$(TARGET_COPY_OUT_VENDOR)/bin/garden_app \
     vendor/realme/r5x/proprietary/vendor/bin/hvdcp_opti:$(TARGET_COPY_OUT_VENDOR)/bin/hvdcp_opti \
     vendor/realme/r5x/proprietary/vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.bluetooth@1.0-service-qti \
-    vendor/realme/r5x/proprietary/vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service-rbs:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.biometrics.fingerprint@2.1-service-rbs \
+    vendor/realme/r5x/proprietary/vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service-RMX2030:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.biometrics.fingerprint@2.1-service-RMX2030 \
     vendor/realme/r5x/proprietary/vendor/bin/hw/android.hardware.drm@1.3-service.widevine:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.drm@1.3-service.widevine \
     vendor/realme/r5x/proprietary/vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.gatekeeper@1.0-service-qti \
     vendor/realme/r5x/proprietary/vendor/bin/hw/android.hardware.health@2.0-service.oppo:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.health@2.0-service.oppo \
@@ -246,6 +246,10 @@ PRODUCT_COPY_FILES += \
     vendor/realme/r5x/proprietary/vendor/bin/xtra-daemon:$(TARGET_COPY_OUT_VENDOR)/bin/xtra-daemon \
     vendor/realme/r5x/proprietary/vendor/bin/xtwifi-client:$(TARGET_COPY_OUT_VENDOR)/bin/xtwifi-client \
     vendor/realme/r5x/proprietary/vendor/bin/xtwifi-inet-agent:$(TARGET_COPY_OUT_VENDOR)/bin/xtwifi-inet-agent \
+    vendor/realme/r5x/proprietary/vendor/odm/bin/hw/vendor.oppo.hardware.biometrics.fingerprint@2.1-service-RMX2030:$(TARGET_COPY_OUT_VENDOR)/odm/bin/hw/vendor.oppo.hardware.biometrics.fingerprint@2.1-service-RMX2030 \
+    vendor/realme/r5x/proprietary/vendor/odm/etc/init/android.hardware.biometrics.fingerprint@2.1-service-RMX2030.rc:$(TARGET_COPY_OUT_VENDOR)/odm/etc/init/android.hardware.biometrics.fingerprint@2.1-service-RMX2030.rc \
+    vendor/realme/r5x/proprietary/vendor/odm/etc/init/vendor.oppo.hardware.biometrics.fingerprint@2.1-service-RMX2030.rc:$(TARGET_COPY_OUT_VENDOR)/odm/etc/init/vendor.oppo.hardware.biometrics.fingerprint@2.1-service-RMX2030.rc \
+    vendor/realme/r5x/proprietary/vendor/odm/lib64/hw/libets_teeclient_v2.so:$(TARGET_COPY_OUT_VENDOR)/odm/lib64/hw/libets_teeclient_v2.so \
     vendor/realme/r5x/proprietary/vendor/etc/DxHDCP.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/DxHDCP.cfg \
     vendor/realme/r5x/proprietary/vendor/etc/acdbdata/19021/Bluetooth_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/19021/Bluetooth_cal.acdb \
     vendor/realme/r5x/proprietary/vendor/etc/acdbdata/19021/Codec_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/19021/Codec_cal.acdb \
@@ -3145,6 +3149,7 @@ PRODUCT_COPY_FILES += \
     vendor/realme/r5x/proprietary/vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so \
     vendor/realme/r5x/proprietary/vendor/lib64/hw/vendor.qti.hardware.bt_channel_avoidance@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.qti.hardware.bt_channel_avoidance@1.0-impl.so \
     vendor/realme/r5x/proprietary/vendor/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so \
+    vendor/realme/r5x/proprietary/vendor/lib64/hw/vendor.egistec.hardware.fingerprint@4.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.egistec.hardware.fingerprint@4.0-impl.so \
     vendor/realme/r5x/proprietary/vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so \
     vendor/realme/r5x/proprietary/vendor/lib64/hw/vendor.qti.hardware.qseecom@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.qti.hardware.qseecom@1.0-impl.so \
     vendor/realme/r5x/proprietary/vendor/lib64/hw/vendor.qti.hardware.sensorscalibrate@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.qti.hardware.sensorscalibrate@1.0-impl.so \
