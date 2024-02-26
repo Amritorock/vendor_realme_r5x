@@ -19,6 +19,9 @@ PRODUCT_COPY_FILES += \
     vendor/realme/r5x/proprietary/etc/permissions/com.qualcomm.qti.imscmservice.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.qualcomm.qti.imscmservice.xml \
     vendor/realme/r5x/proprietary/etc/permissions/qti_libpermissions.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/qti_libpermissions.xml \
     vendor/realme/r5x/proprietary/etc/permissions/qti_permissions.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/qti_permissions.xml \
+    vendor/realme/r5x/proprietary/product/bin/dpmd:$(TARGET_COPY_OUT_PRODUCT)/bin/dpmd \
+    vendor/realme/r5x/proprietary/product/bin/sigma_miracasthalservice:$(TARGET_COPY_OUT_PRODUCT)/bin/sigma_miracasthalservice \
+    vendor/realme/r5x/proprietary/product/bin/wfdservice:$(TARGET_COPY_OUT_PRODUCT)/bin/wfdservice \
     vendor/realme/r5x/proprietary/product/etc/permissions/com.qti.snapdragon.sdk.display.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.qti.snapdragon.sdk.display.xml \
     vendor/realme/r5x/proprietary/product/etc/permissions/com.qualcomm.qti.imscmservice-V2.0-java.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.qualcomm.qti.imscmservice-V2.0-java.xml \
     vendor/realme/r5x/proprietary/product/etc/permissions/com.qualcomm.qti.imscmservice-V2.1-java.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.qualcomm.qti.imscmservice-V2.1-java.xml \
@@ -26,6 +29,48 @@ PRODUCT_COPY_FILES += \
     vendor/realme/r5x/proprietary/product/etc/permissions/embms.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/embms.xml \
     vendor/realme/r5x/proprietary/product/etc/permissions/qcrilhook.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/qcrilhook.xml \
     vendor/realme/r5x/proprietary/product/etc/permissions/telephonyservice.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/telephonyservice.xml \
+    vendor/realme/r5x/proprietary/product/etc/dpm/dpm.conf:$(TARGET_COPY_OUT_PRODUCT)/etc/dpm/dpm.conf \
+    vendor/realme/r5x/proprietary/etc/init/com.qualcomm.qti.sigma_miracast@1.0-service.rc:$(TARGET_COPY_OUT_PRODUCT)/etc/init/com.qualcomm.qti.sigma_miracast@1.0-service.rc \
+    vendor/realme/r5x/proprietary/etc/init/dpmd.rc:$(TARGET_COPY_OUT_PRODUCT)/etc/init/dpmd.rc \
+    vendor/realme/r5x/proprietary/etc/init/wfdservice.rc:$(TARGET_COPY_OUT_PRODUCT)/etc/init/wfdservice.rc \
+    vendor/realme/r5x/proprietary/etc/permissions/com.qti.dpmframework.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.qti.dpmframework.xml \
+    vendor/realme/r5x/proprietary/etc/permissions/dpmapi.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/dpmapi.xml \
+    vendor/realme/r5x/proprietary/etc/permissions/wfd-product-privapp-permissions-qti.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/wfd-system-ext-privapp-permissions-qti.xml \
+    vendor/realme/r5x/proprietary/etc/seccomp_policy/wfdservice.policy:$(TARGET_COPY_OUT_PRODUCT)/etc/seccomp_policy/wfdservice.policy \
+    vendor/realme/r5x/proprietary/etc/wfdconfigsink.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/wfdconfigsink.xml \
+    vendor/realme/r5x/proprietary/product/lib/com.qualcomm.qti.wifidisplayhal@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib/com.qualcomm.qti.wifidisplayhal@1.0.so \
+    vendor/realme/r5x/proprietary/product/lib/fm_helium.so:$(TARGET_COPY_OUT_PRODUCT)/lib/fm_helium.so \
+    vendor/realme/r5x/proprietary/product/lib/hw/vendor.qti.hardware.sigma_miracast@1.0-impl.so:$(TARGET_COPY_OUT_PRODUCT)/lib/hw/vendor.qti.hardware.sigma_miracast@1.0-impl.so \
+    vendor/realme/r5x/proprietary/product/lib/libfm-hci.so:$(TARGET_COPY_OUT_PRODUCT)/lib/libfm-hci.so \
+    vendor/realme/r5x/proprietary/product/lib/libmiracastsystem.so:$(TARGET_COPY_OUT_PRODUCT)/lib/libmiracastsystem.so \
+    vendor/realme/r5x/proprietary/product/lib/libmmosal.so:$(TARGET_COPY_OUT_PRODUCT)/lib/libmmosal.so \
+    vendor/realme/r5x/proprietary/product/lib/libmmparser_lite.so:$(TARGET_COPY_OUT_PRODUCT)/lib/libmmparser_lite.so \
+    vendor/realme/r5x/proprietary/product/lib/libmmrtpdecoder.so:$(TARGET_COPY_OUT_PRODUCT)/lib/libmmrtpdecoder.so \
+    vendor/realme/r5x/proprietary/product/lib/libmmrtpencoder.so:$(TARGET_COPY_OUT_PRODUCT)/lib/libmmrtpencoder.so \
+    vendor/realme/r5x/proprietary/product/lib/libsd_sdk_display.qti.so:$(TARGET_COPY_OUT_PRODUCT)/lib/libsd_sdk_display.qti.so \
+    vendor/realme/r5x/proprietary/product/lib/libsdm-disp-apis.qti.so:$(TARGET_COPY_OUT_PRODUCT)/lib/libsdm-disp-apis.qti.so \
+    vendor/realme/r5x/proprietary/product/lib/libwfdaac.so:$(TARGET_COPY_OUT_PRODUCT)/lib/libwfdaac.so \
+    vendor/realme/r5x/proprietary/product/lib/libwfdavenhancements.so:$(TARGET_COPY_OUT_PRODUCT)/lib/libwfdavenhancements.so \
+    vendor/realme/r5x/proprietary/product/lib/libwfdclient.so:$(TARGET_COPY_OUT_PRODUCT)/lib/libwfdclient.so \
+    vendor/realme/r5x/proprietary/product/lib/libwfdcommonutils.so:$(TARGET_COPY_OUT_PRODUCT)/lib/libwfdcommonutils.so \
+    vendor/realme/r5x/proprietary/product/lib/libwfdconfigutils.so:$(TARGET_COPY_OUT_PRODUCT)/lib/libwfdconfigutils.so \
+    vendor/realme/r5x/proprietary/product/lib/libwfddisplayconfig.so:$(TARGET_COPY_OUT_PRODUCT)/lib/libwfddisplayconfig.so \
+    vendor/realme/r5x/proprietary/product/lib/libwfdmminterface.so:$(TARGET_COPY_OUT_PRODUCT)/lib/libwfdmminterface.so \
+    vendor/realme/r5x/proprietary/product/lib/libwfdmmsink.so:$(TARGET_COPY_OUT_PRODUCT)/lib/libwfdmmsink.so \
+    vendor/realme/r5x/proprietary/product/lib/libwfdmmsrc_system.so:$(TARGET_COPY_OUT_PRODUCT)/lib/libwfdmmsrc_system.so \
+    vendor/realme/r5x/proprietary/product/lib/libwfdnative.so:$(TARGET_COPY_OUT_PRODUCT)/lib/libwfdnative.so \
+    vendor/realme/r5x/proprietary/product/lib/libwfdrtsp.so:$(TARGET_COPY_OUT_PRODUCT)/lib/libwfdrtsp.so \
+    vendor/realme/r5x/proprietary/product/lib/libwfdservice.so:$(TARGET_COPY_OUT_PRODUCT)/lib/libwfdservice.so \
+    vendor/realme/r5x/proprietary/product/lib/libwfdsinksm.so:$(TARGET_COPY_OUT_PRODUCT)/lib/libwfdsinksm.so \
+    vendor/realme/r5x/proprietary/product/lib/libwfduibcinterface.so:$(TARGET_COPY_OUT_PRODUCT)/lib/libwfduibcinterface.so \
+    vendor/realme/r5x/proprietary/product/lib/libwfduibcsink.so:$(TARGET_COPY_OUT_PRODUCT)/lib/libwfduibcsink.so \
+    vendor/realme/r5x/proprietary/product/lib/libwfduibcsinkinterface.so:$(TARGET_COPY_OUT_PRODUCT)/lib/libwfduibcsinkinterface.so \
+    vendor/realme/r5x/proprietary/product/lib/libwfduibcsrc.so:$(TARGET_COPY_OUT_PRODUCT)/lib/libwfduibcsrc.so \
+    vendor/realme/r5x/proprietary/product/lib/libwfduibcsrcinterface.so:$(TARGET_COPY_OUT_PRODUCT)/lib/libwfduibcsrcinterface.so \
+    vendor/realme/r5x/proprietary/product/lib/vendor.qti.hardware.fm@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib/vendor.qti.hardware.fm@1.0.so \
+    vendor/realme/r5x/proprietary/product/lib/vendor.qti.hardware.sigma_miracast@1.0-halimpl.so:$(TARGET_COPY_OUT_PRODUCT)/lib/vendor.qti.hardware.sigma_miracast@1.0-halimpl.so \
+    vendor/realme/r5x/proprietary/product/lib/vendor.qti.hardware.sigma_miracast@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib/vendor.qti.hardware.sigma_miracast@1.0.so \
+    vendor/realme/r5x/proprietary/product/lib/vendor.qti.hardware.wifidisplaysession@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib/vendor.qti.hardware.wifidisplaysession@1.0.so \
     vendor/realme/r5x/proprietary/product/lib64/com.qualcomm.qti.ant@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/com.qualcomm.qti.ant@1.0.so \
     vendor/realme/r5x/proprietary/product/lib64/com.qualcomm.qti.imscmservice@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/com.qualcomm.qti.imscmservice@1.0.so \
     vendor/realme/r5x/proprietary/product/lib64/com.qualcomm.qti.imscmservice@2.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/com.qualcomm.qti.imscmservice@2.0.so \
@@ -45,85 +90,40 @@ PRODUCT_COPY_FILES += \
     vendor/realme/r5x/proprietary/product/lib64/vendor.qti.ims.rcsconfig@1.1.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/vendor.qti.ims.rcsconfig@1.1.so \
     vendor/realme/r5x/proprietary/product/lib64/vendor.qti.imsrtpservice@2.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/vendor.qti.imsrtpservice@2.0.so \
     vendor/realme/r5x/proprietary/product/lib64/vendor.qti.imsrtpservice@2.1.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/vendor.qti.imsrtpservice@2.1.so \
-    vendor/realme/r5x/proprietary/system_ext/bin/dpmd:$(TARGET_COPY_OUT_SYSTEM_EXT)/bin/dpmd \
-    vendor/realme/r5x/proprietary/system_ext/bin/sigma_miracasthalservice:$(TARGET_COPY_OUT_SYSTEM_EXT)/bin/sigma_miracasthalservice \
-    vendor/realme/r5x/proprietary/system_ext/bin/wfdservice:$(TARGET_COPY_OUT_SYSTEM_EXT)/bin/wfdservice \
-    vendor/realme/r5x/proprietary/system_ext/etc/dpm/dpm.conf:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/dpm/dpm.conf \
-    vendor/realme/r5x/proprietary/system_ext/etc/init/com.qualcomm.qti.sigma_miracast@1.0-service.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/com.qualcomm.qti.sigma_miracast@1.0-service.rc \
-    vendor/realme/r5x/proprietary/system_ext/etc/init/dpmd.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/dpmd.rc \
-    vendor/realme/r5x/proprietary/system_ext/etc/init/wfdservice.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/wfdservice.rc \
-    vendor/realme/r5x/proprietary/system_ext/etc/permissions/com.qti.dpmframework.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.qti.dpmframework.xml \
-    vendor/realme/r5x/proprietary/system_ext/etc/permissions/dpmapi.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/dpmapi.xml \
-    vendor/realme/r5x/proprietary/system_ext/etc/permissions/wfd-system-ext-privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/wfd-system-ext-privapp-permissions-qti.xml \
-    vendor/realme/r5x/proprietary/system_ext/etc/seccomp_policy/wfdservice.policy:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/seccomp_policy/wfdservice.policy \
-    vendor/realme/r5x/proprietary/system_ext/etc/wfdconfigsink.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/wfdconfigsink.xml \
-    vendor/realme/r5x/proprietary/system_ext/lib/com.qualcomm.qti.wifidisplayhal@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/com.qualcomm.qti.wifidisplayhal@1.0.so \
-    vendor/realme/r5x/proprietary/system_ext/lib/fm_helium.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/fm_helium.so \
-    vendor/realme/r5x/proprietary/system_ext/lib/hw/vendor.qti.hardware.sigma_miracast@1.0-impl.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/hw/vendor.qti.hardware.sigma_miracast@1.0-impl.so \
-    vendor/realme/r5x/proprietary/system_ext/lib/libfm-hci.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libfm-hci.so \
-    vendor/realme/r5x/proprietary/system_ext/lib/libmiracastsystem.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libmiracastsystem.so \
-    vendor/realme/r5x/proprietary/system_ext/lib/libmmosal.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libmmosal.so \
-    vendor/realme/r5x/proprietary/system_ext/lib/libmmparser_lite.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libmmparser_lite.so \
-    vendor/realme/r5x/proprietary/system_ext/lib/libmmrtpdecoder.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libmmrtpdecoder.so \
-    vendor/realme/r5x/proprietary/system_ext/lib/libmmrtpencoder.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libmmrtpencoder.so \
-    vendor/realme/r5x/proprietary/system_ext/lib/libsd_sdk_display.qti.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libsd_sdk_display.qti.so \
-    vendor/realme/r5x/proprietary/system_ext/lib/libsdm-disp-apis.qti.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libsdm-disp-apis.qti.so \
-    vendor/realme/r5x/proprietary/system_ext/lib/libwfdaac.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libwfdaac.so \
-    vendor/realme/r5x/proprietary/system_ext/lib/libwfdavenhancements.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libwfdavenhancements.so \
-    vendor/realme/r5x/proprietary/system_ext/lib/libwfdclient.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libwfdclient.so \
-    vendor/realme/r5x/proprietary/system_ext/lib/libwfdcommonutils.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libwfdcommonutils.so \
-    vendor/realme/r5x/proprietary/system_ext/lib/libwfdconfigutils.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libwfdconfigutils.so \
-    vendor/realme/r5x/proprietary/system_ext/lib/libwfddisplayconfig.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libwfddisplayconfig.so \
-    vendor/realme/r5x/proprietary/system_ext/lib/libwfdmminterface.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libwfdmminterface.so \
-    vendor/realme/r5x/proprietary/system_ext/lib/libwfdmmsink.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libwfdmmsink.so \
-    vendor/realme/r5x/proprietary/system_ext/lib/libwfdmmsrc_system.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libwfdmmsrc_system.so \
-    vendor/realme/r5x/proprietary/system_ext/lib/libwfdnative.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libwfdnative.so \
-    vendor/realme/r5x/proprietary/system_ext/lib/libwfdrtsp.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libwfdrtsp.so \
-    vendor/realme/r5x/proprietary/system_ext/lib/libwfdservice.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libwfdservice.so \
-    vendor/realme/r5x/proprietary/system_ext/lib/libwfdsinksm.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libwfdsinksm.so \
-    vendor/realme/r5x/proprietary/system_ext/lib/libwfduibcinterface.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libwfduibcinterface.so \
-    vendor/realme/r5x/proprietary/system_ext/lib/libwfduibcsink.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libwfduibcsink.so \
-    vendor/realme/r5x/proprietary/system_ext/lib/libwfduibcsinkinterface.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libwfduibcsinkinterface.so \
-    vendor/realme/r5x/proprietary/system_ext/lib/libwfduibcsrc.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libwfduibcsrc.so \
-    vendor/realme/r5x/proprietary/system_ext/lib/libwfduibcsrcinterface.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libwfduibcsrcinterface.so \
-    vendor/realme/r5x/proprietary/system_ext/lib/vendor.qti.hardware.fm@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/vendor.qti.hardware.fm@1.0.so \
-    vendor/realme/r5x/proprietary/system_ext/lib/vendor.qti.hardware.sigma_miracast@1.0-halimpl.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/vendor.qti.hardware.sigma_miracast@1.0-halimpl.so \
-    vendor/realme/r5x/proprietary/system_ext/lib/vendor.qti.hardware.sigma_miracast@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/vendor.qti.hardware.sigma_miracast@1.0.so \
-    vendor/realme/r5x/proprietary/system_ext/lib/vendor.qti.hardware.wifidisplaysession@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/vendor.qti.hardware.wifidisplaysession@1.0.so \
-    vendor/realme/r5x/proprietary/system_ext/lib64/com.qualcomm.qti.dpm.api@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/com.qualcomm.qti.dpm.api@1.0.so \
-    vendor/realme/r5x/proprietary/system_ext/lib64/fm_helium.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/fm_helium.so \
-    vendor/realme/r5x/proprietary/system_ext/lib64/hw/vendor.qti.hardware.sigma_miracast@1.0-impl.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/hw/vendor.qti.hardware.sigma_miracast@1.0-impl.so \
-    vendor/realme/r5x/proprietary/system_ext/lib64/libdiag_system.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libdiag_system.so \
-    vendor/realme/r5x/proprietary/system_ext/lib64/libdpmctmgr.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libdpmctmgr.so \
-    vendor/realme/r5x/proprietary/system_ext/lib64/libdpmfdmgr.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libdpmfdmgr.so \
-    vendor/realme/r5x/proprietary/system_ext/lib64/libdpmframework.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libdpmframework.so \
-    vendor/realme/r5x/proprietary/system_ext/lib64/libdpmtcm.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libdpmtcm.so \
-    vendor/realme/r5x/proprietary/system_ext/lib64/libfm-hci.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libfm-hci.so \
-    vendor/realme/r5x/proprietary/system_ext/lib64/libmiracastsystem.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libmiracastsystem.so \
-    vendor/realme/r5x/proprietary/system_ext/lib64/libmmosal.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libmmosal.so \
-    vendor/realme/r5x/proprietary/system_ext/lib64/libmmparser_lite.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libmmparser_lite.so \
-    vendor/realme/r5x/proprietary/system_ext/lib64/libmmrtpdecoder.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libmmrtpdecoder.so \
-    vendor/realme/r5x/proprietary/system_ext/lib64/libmmrtpencoder.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libmmrtpencoder.so \
-    vendor/realme/r5x/proprietary/system_ext/lib64/libmwqemiptablemgr.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libmwqemiptablemgr.so \
-    vendor/realme/r5x/proprietary/system_ext/lib64/libsd_sdk_display.qti.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libsd_sdk_display.qti.so \
-    vendor/realme/r5x/proprietary/system_ext/lib64/libsdm-disp-apis.qti.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libsdm-disp-apis.qti.so \
-    vendor/realme/r5x/proprietary/system_ext/lib64/libwfdclient.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libwfdclient.so \
-    vendor/realme/r5x/proprietary/system_ext/lib64/libwfdcommonutils.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libwfdcommonutils.so \
-    vendor/realme/r5x/proprietary/system_ext/lib64/libwfdconfigutils.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libwfdconfigutils.so \
-    vendor/realme/r5x/proprietary/system_ext/lib64/libwfddisplayconfig.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libwfddisplayconfig.so \
-    vendor/realme/r5x/proprietary/system_ext/lib64/libwfdmminterface.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libwfdmminterface.so \
-    vendor/realme/r5x/proprietary/system_ext/lib64/libwfdmmsink.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libwfdmmsink.so \
-    vendor/realme/r5x/proprietary/system_ext/lib64/libwfdnative.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libwfdnative.so \
-    vendor/realme/r5x/proprietary/system_ext/lib64/libwfdrtsp.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libwfdrtsp.so \
-    vendor/realme/r5x/proprietary/system_ext/lib64/libwfdsinksm.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libwfdsinksm.so \
-    vendor/realme/r5x/proprietary/system_ext/lib64/libwfduibcinterface.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libwfduibcinterface.so \
-    vendor/realme/r5x/proprietary/system_ext/lib64/libwfduibcsink.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libwfduibcsink.so \
-    vendor/realme/r5x/proprietary/system_ext/lib64/libwfduibcsinkinterface.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libwfduibcsinkinterface.so \
-    vendor/realme/r5x/proprietary/system_ext/lib64/libwfduibcsrc.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libwfduibcsrc.so \
-    vendor/realme/r5x/proprietary/system_ext/lib64/libwfduibcsrcinterface.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libwfduibcsrcinterface.so \
-    vendor/realme/r5x/proprietary/system_ext/lib64/vendor.qti.diaghal@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.qti.diaghal@1.0.so \
-    vendor/realme/r5x/proprietary/system_ext/lib64/vendor.qti.hardware.fm@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.qti.hardware.fm@1.0.so \
-    vendor/realme/r5x/proprietary/system_ext/lib64/vendor.qti.hardware.wifidisplaysession@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.qti.hardware.wifidisplaysession@1.0.so \
+    vendor/realme/r5x/proprietary/product/lib64/com.qualcomm.qti.dpm.api@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/com.qualcomm.qti.dpm.api@1.0.so \
+    vendor/realme/r5x/proprietary/product/lib64/fm_helium.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/fm_helium.so \
+    vendor/realme/r5x/proprietary/product/lib64/hw/vendor.qti.hardware.sigma_miracast@1.0-impl.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/hw/vendor.qti.hardware.sigma_miracast@1.0-impl.so \
+    vendor/realme/r5x/proprietary/product/lib64/libdiag_system.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/libdiag_system.so \
+    vendor/realme/r5x/proprietary/product/lib64/libdpmctmgr.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/libdpmctmgr.so \
+    vendor/realme/r5x/proprietary/product/lib64/libdpmfdmgr.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/libdpmfdmgr.so \
+    vendor/realme/r5x/proprietary/product/lib64/libdpmframework.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/libdpmframework.so \
+    vendor/realme/r5x/proprietary/product/lib64/libdpmtcm.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/libdpmtcm.so \
+    vendor/realme/r5x/proprietary/product/lib64/libfm-hci.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/libfm-hci.so \
+    vendor/realme/r5x/proprietary/product/lib64/libmiracastsystem.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/libmiracastsystem.so \
+    vendor/realme/r5x/proprietary/product/lib64/libmmosal.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/libmmosal.so \
+    vendor/realme/r5x/proprietary/product/lib64/libmmparser_lite.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/libmmparser_lite.so \
+    vendor/realme/r5x/proprietary/product/lib64/libmmrtpdecoder.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/libmmrtpdecoder.so \
+    vendor/realme/r5x/proprietary/product/lib64/libmmrtpencoder.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/libmmrtpencoder.so \
+    vendor/realme/r5x/proprietary/product/lib64/libmwqemiptablemgr.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/libmwqemiptablemgr.so \
+    vendor/realme/r5x/proprietary/product/lib64/libsd_sdk_display.qti.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/libsd_sdk_display.qti.so \
+    vendor/realme/r5x/proprietary/product/lib64/libsdm-disp-apis.qti.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/libsdm-disp-apis.qti.so \
+    vendor/realme/r5x/proprietary/product/lib64/libwfdclient.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/libwfdclient.so \
+    vendor/realme/r5x/proprietary/product/lib64/libwfdcommonutils.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/libwfdcommonutils.so \
+    vendor/realme/r5x/proprietary/product/lib64/libwfdconfigutils.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/libwfdconfigutils.so \
+    vendor/realme/r5x/proprietary/product/lib64/libwfddisplayconfig.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/libwfddisplayconfig.so \
+    vendor/realme/r5x/proprietary/product/lib64/libwfdmminterface.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/libwfdmminterface.so \
+    vendor/realme/r5x/proprietary/product/lib64/libwfdmmsink.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/libwfdmmsink.so \
+    vendor/realme/r5x/proprietary/product/lib64/libwfdnative.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/libwfdnative.so \
+    vendor/realme/r5x/proprietary/product/lib64/libwfdrtsp.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/libwfdrtsp.so \
+    vendor/realme/r5x/proprietary/product/lib64/libwfdsinksm.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/libwfdsinksm.so \
+    vendor/realme/r5x/proprietary/product/lib64/libwfduibcinterface.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/libwfduibcinterface.so \
+    vendor/realme/r5x/proprietary/product/lib64/libwfduibcsink.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/libwfduibcsink.so \
+    vendor/realme/r5x/proprietary/product/lib64/libwfduibcsinkinterface.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/libwfduibcsinkinterface.so \
+    vendor/realme/r5x/proprietary/product/lib64/libwfduibcsrc.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/libwfduibcsrc.so \
+    vendor/realme/r5x/proprietary/product/lib64/libwfduibcsrcinterface.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/libwfduibcsrcinterface.so \
+    vendor/realme/r5x/proprietary/product/lib64/vendor.qti.diaghal@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/vendor.qti.diaghal@1.0.so \
+    vendor/realme/r5x/proprietary/product/lib64/vendor.qti.hardware.fm@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/vendor.qti.hardware.fm@1.0.so \
+    vendor/realme/r5x/proprietary/product/lib64/vendor.qti.hardware.wifidisplaysession@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/vendor.qti.hardware.wifidisplaysession@1.0.so \
     vendor/realme/r5x/proprietary/vendor/bin/ATFWD-daemon:$(TARGET_COPY_OUT_VENDOR)/bin/ATFWD-daemon \
     vendor/realme/r5x/proprietary/vendor/bin/adpl:$(TARGET_COPY_OUT_VENDOR)/bin/adpl \
     vendor/realme/r5x/proprietary/vendor/bin/adsprpcd:$(TARGET_COPY_OUT_VENDOR)/bin/adsprpcd \

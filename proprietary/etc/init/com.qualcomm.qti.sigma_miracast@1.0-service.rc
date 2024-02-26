@@ -1,4 +1,4 @@
-service sigmahal /system_ext/bin/sigma_miracasthalservice
+service sigmahal /product/bin/sigma_miracasthalservice
   interface vendor.qti.hardware.sigma_miracast@1.0::Isigma_miracast sigmahal
   class main
   user system

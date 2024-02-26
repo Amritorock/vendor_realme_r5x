@@ -4,5 +4,5 @@
     Confidential and Proprietary - Qualcomm Technologies, Inc.-->
 <permissions>
     <library name="com.qti.dpmapi"
-        file="/system/system_ext/framework/dpmapi.jar"/>
+        file="/system/product/framework/dpmapi.jar"/>
 </permissions>
