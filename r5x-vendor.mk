@@ -2676,9 +2676,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libantradio \
     libMpeg4SwEncoder \
+    SoterService \
     CACertService \
     CneApp \
-    SoterService \
     TimeService \
     PowerOffAlarm \
     QtiTelephonyService \
