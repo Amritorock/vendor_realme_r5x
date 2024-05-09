@@ -183,17 +183,6 @@ android_app_import {
 }
 
 android_app_import {
-	name: "PowerOffAlarm",
-	owner: "realme",
-	apk: "proprietary/product/app/PowerOffAlarm/PowerOffAlarm.apk",
-	certificate: "platform",
-	dex_preopt: {
-		enabled: false,
-	},
-	product_specific: true,
-}
-
-android_app_import {
 	name: "QtiTelephonyService",
 	owner: "realme",
 	apk: "proprietary/product/app/QtiTelephonyService/QtiTelephonyService.apk",
@@ -259,6 +248,17 @@ android_app_import {
 	},
 	privileged: true,
 	product_specific: true,
+}
+
+android_app_import {
+	name: "PowerOffAlarm",
+	owner: "realme",
+	apk: "proprietary/system_ext/app/PowerOffAlarm/PowerOffAlarm.apk",
+	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+	system_ext_specific: true,
 }
 
 android_app_import {
@@ -401,13 +401,6 @@ dex_import {
 	name: "dpmapi",
 	owner: "realme",
 	jars: ["proprietary/system_ext/framework/dpmapi.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "vendor.qti.hardware.alarm-V1.0-java",
-	owner: "realme",
-	jars: ["proprietary/system_ext/framework/vendor.qti.hardware.alarm-V1.0-java.jar"],
 	system_ext_specific: true,
 }
 

@@ -2614,13 +2614,13 @@ PRODUCT_PACKAGES += \
     CneApp \
     IWlanService \
     TimeService \
-    PowerOffAlarm \
     QtiTelephonyService \
     embms \
     imssettings \
     uceShimService \
     ims \
     qcrilmsgtunnel \
+    PowerOffAlarm \
     dpmserviceapp \
     audiosphere \
     tcmclient \
@@ -2641,7 +2641,6 @@ PRODUCT_PACKAGES += \
     com.quicinc.cne.constants-V2.0-java \
     com.quicinc.cne.constants-V2.1-java \
     dpmapi \
-    vendor.qti.hardware.alarm-V1.0-java \
     vendor.qti.hardware.data.cne.internal.api-V1.0-java \
     vendor.qti.hardware.data.cne.internal.constants-V1.0-java \
     vendor.qti.hardware.data.connection-V1.0-java \
