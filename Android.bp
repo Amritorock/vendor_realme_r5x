@@ -282,7 +282,7 @@ dex_import {
 dex_import {
 	name: "tcmclient",
 	owner: "realme",
-	jars: ["proprietary/framework/tcmclient.jar"],
+	jars: ["proprietary/system/framework/tcmclient.jar"],
 }
 
 dex_import {
