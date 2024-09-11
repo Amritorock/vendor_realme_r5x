@@ -2603,6 +2603,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.ims.rcsuce-V1.1-java \
     vendor.qti.ims.rcsuce-V1.2-java \
     vendor.qti.ims.rcsuceaidlservice-V1-java \
+    android.hardware.keymaster@4.1-service-default-qti \
     manifest_android.hardware.drm@1.3-service.widevine \
     vendor.qti.gnss@4.3-service
 
