@@ -296,6 +296,10 @@ PRODUCT_COPY_FILES += \
     vendor/realme/r5x/proprietary/vendor/firmware/tp/19743/nt_hltg_fw.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/tp/19743/nt_hltg_fw.bin \
     vendor/realme/r5x/proprietary/vendor/firmware/tp/19743/nt_hltg_fw_mp.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/tp/19743/nt_hltg_fw_mp.bin \
     vendor/realme/r5x/proprietary/vendor/firmware/tp/19743/nt_hltg_fw_signed.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/tp/19743/nt_hltg_fw_signed.bin \
+    vendor/realme/r5x/proprietary/vendor/gpu/kbc/sequence_manifest.bin:$(TARGET_COPY_OUT_VENDOR)/gpu/kbc/sequence_manifest.bin \
+    vendor/realme/r5x/proprietary/vendor/gpu/kbc/unified_kbcs_32.bin:$(TARGET_COPY_OUT_VENDOR)/gpu/kbc/unified_kbcs_32.bin \
+    vendor/realme/r5x/proprietary/vendor/gpu/kbc/unified_kbcs_64.bin:$(TARGET_COPY_OUT_VENDOR)/gpu/kbc/unified_kbcs_64.bin \
+    vendor/realme/r5x/proprietary/vendor/gpu/kbc/unified_ksqs.bin:$(TARGET_COPY_OUT_VENDOR)/gpu/kbc/unified_ksqs.bin \
     vendor/realme/r5x/proprietary/vendor/radio/qcril_database/qcril.db:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/qcril.db \
     vendor/realme/r5x/proprietary/vendor/radio/qcril_database/upgrade/0_initial.sql:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/upgrade/0_initial.sql \
     vendor/realme/r5x/proprietary/vendor/radio/qcril_database/upgrade/10_version_update_ecc_table.sql:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/upgrade/10_version_update_ecc_table.sql \
@@ -334,10 +338,12 @@ PRODUCT_PACKAGES += \
     libOppoAPSMemMgr \
     libOppoAlgoClient \
     libQSEEComAPI \
+    libVkLayer_q3dtools \
     libacdb-fts \
     libacdbloader \
     libacdbrtac \
     libadiertac \
+    libadreno_app_profiles \
     libadreno_utils \
     libadsp_default_listener \
     libadsprpc \
@@ -362,9 +368,12 @@ PRODUCT_PACKAGES += \
     libdsutils \
     libfastcvdsp_stub \
     libfastcvopt \
+    libgpudataproducer \
     libgsl \
     libhypnusclient \
     libidl \
+    libkcl \
+    libkernelmanager \
     libllvm-glnext \
     libllvm-qcom \
     libmdmdetect \
@@ -430,6 +439,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.vpp@1.1 \
     vendor.qti.hardware.vpp@1.2 \
     vendor.qti.hardware.vpp@1.3 \
+    vendor.qti.qspmhal@1.0 \
     camera.trinket \
     vendor.oppo.hardware.camera.oppoHalAssist@1.0-impl \
     imx386_PdafLibrary \
@@ -1772,22 +1782,22 @@ PRODUCT_PACKAGES += \
     vendor.qti.imsrtpservice@3.0_vendor \
     vendor.qti.latency@2.0_vendor \
     vendor.qti.latency@2.1_vendor \
-    vendor_lib_rfsa_adsp_libVC1Dec_so \
-    vendor_lib_rfsa_adsp_libVC1DecDsp_skel_so \
-    vendor_lib_rfsa_adsp_libapps_mem_heap_so \
-    vendor_lib_rfsa_adsp_libarcsoft_dualcam_refocus_skel_so \
-    vendor_lib_rfsa_adsp_libarcsoft_hdrplus_hvx_skel_so \
-    vendor_lib_rfsa_adsp_libcamera_nn_skel_so \
-    vendor_lib_rfsa_adsp_libcvpdsp_skel_so \
-    vendor_lib_rfsa_adsp_libdspCV_skel_so \
-    vendor_lib_rfsa_adsp_libdsp_streamer_add_constant_so \
-    vendor_lib_rfsa_adsp_libdsp_streamer_binning_so \
-    vendor_lib_rfsa_adsp_libdsp_streamer_skel_so \
-    vendor_lib_rfsa_adsp_libfastcvadsp_so \
-    vendor_lib_rfsa_adsp_libfastcvdsp_skel_so \
-    vendor_lib_rfsa_adsp_libhexagon_nn_skel_so \
-    vendor_lib_rfsa_adsp_libsns_device_mode_skel_so \
-    vendor_lib_rfsa_adsp_libsns_low_lat_stream_skel_so \
+    libVC1Dec \
+    libVC1DecDsp_skel \
+    libapps_mem_heap \
+    libarcsoft_dualcam_refocus_skel \
+    libarcsoft_hdrplus_hvx_skel \
+    libcamera_nn_skel \
+    libcvpdsp_skel \
+    libdspCV_skel \
+    libdsp_streamer_add_constant \
+    libdsp_streamer_binning \
+    libdsp_streamer_skel \
+    libfastcvadsp \
+    libfastcvdsp_skel \
+    libhexagon_nn_skel \
+    libsns_device_mode_skel \
+    libsns_low_lat_stream_skel \
     com.qualcomm.qti.dpm.api@1.0 \
     com.qualcomm.qti.imscmservice@2.0 \
     com.qualcomm.qti.imscmservice@2.1 \
